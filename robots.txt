@@ -1,0 +1,12 @@
+# www.robotstxt.org/
+
+User-agent: ia_archiver
+Disallow: /
+User-agent: psbot
+Disallow: /
+Disallow: /cgi-bin/
+User-agent: *
+Disallow:
+Sitemap: https://www.dinanescrimearmor.fr/sitemap.xml
+
+
