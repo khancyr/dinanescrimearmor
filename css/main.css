@@ -24,10 +24,15 @@ body {
   max-height: 2.5rem;
 }
 
+.navbar-item {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
 .logo-text {
   font-weight: 700;
   color: var(--theme-main-color);
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .section {
@@ -92,6 +97,13 @@ body {
   background-color: #363636;
   color: white;
   transition: background-color 0.3s;
+  padding: 1.5rem 1.5rem 1.5rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 
@@ -212,6 +224,59 @@ body {
   margin: 0.5rem;
 }
 
+/* Styles spécifiques à la page d'accueil */
+.hero-home {
+  background: linear-gradient(rgba(0, 58, 93, 0.8), rgba(0, 86, 179, 0.8)), url('../img/fencing-duel.svg');
+  background-size: contain, cover;
+  background-position: center;
+  background-repeat: no-repeat, no-repeat;
+  color: white;
+}
+
+.achievement-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-card strong {
+  color: #363636 !important;
+}
+
+.achievement-card p {
+  color: #363636;
+}
+
+.achievement-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--theme-main-color);
+}
+
+.values-section {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--theme-main-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1rem auto;
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -259,4 +324,228 @@ strong {
 
 #club .image img {
   object-fit: contain;
+}
+
+/* Amélioration de la taille des headers */
+.title.is-1 {
+  font-size: 4rem !important;
+}
+
+.title.is-2 {
+  font-size: 3rem !important;
+}
+
+.title.is-3 {
+  font-size: 2.5rem !important;
+}
+
+.title.is-4 {
+  font-size: 2rem !important;
+}
+
+.subtitle.is-3 {
+  font-size: 2rem !important;
+}
+
+.subtitle.is-5 {
+  font-size: 1.5rem !important;
+}
+
+.subtitle.is-6 {
+  font-size: 1.25rem !important;
+}
+
+/* Styles spécifiques à la page disciplines */
+.discipline-hero {
+  background: linear-gradient(135deg, #003a5d, #0056b3);
+  color: white;
+}
+
+.discipline-hero .title,
+.discipline-hero .subtitle {
+  color: white !important;
+}
+
+.discipline-card {
+  height: 100%;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.discipline-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.discipline-icon {
+  font-size: 3rem;
+  color: var(--theme-main-color);
+  margin-bottom: 1.5rem;
+}
+
+.olympic-badge {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  color: #003a5d;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.special-section {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.feature-list li:before {
+  content: "⚔️";
+  margin-right: 0.75rem;
+}
+
+/* Feature list pour la page inscription avec style différent */
+.inscription-hero ~ section .feature-list li:before,
+.helloasso-section .feature-list li:before,
+.steps-section .feature-list li:before {
+  content: "✓";
+  color: #48c774;
+  font-weight: bold;
+  margin-right: 0.75rem;
+}
+
+.inscription-hero ~ section .feature-list li,
+.helloasso-section .feature-list li,
+.steps-section .feature-list li {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Styles spécifiques à la page inscription */
+.inscription-hero {
+  background: linear-gradient(135deg, #003a5d, #0056b3);
+  color: white;
+}
+
+.inscription-hero .title,
+.inscription-hero .subtitle {
+  color: white !important;
+}
+
+.pricing-card {
+  height: 100%;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.pricing-card.is-featured {
+  border: 3px solid #0056b3;
+  transform: scale(1.05);
+}
+
+.pricing-card.is-featured:hover {
+  transform: scale(1.08) translateY(-5px);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  color: #003a5d;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--theme-main-color);
+}
+
+.price-period {
+  font-size: 1rem;
+  color: #666;
+}
+
+.steps-section {
+  background: #f8f9fa;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--theme-main-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1rem auto;
+}
+
+.helloasso-section {
+  background: linear-gradient(135deg, #e8f4f8, #d1ecf1);
+}
+
+.helloasso-button {
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.helloasso-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  color: white;
+}
+
+/* Styles pour la page 404 */
+.error-hero {
+  background: linear-gradient(135deg, #003a5d, #0056b3);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.error-number {
+  font-size: 8rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1;
+}
+
+.sword-icon {
+  font-size: 4rem;
+  color: white;
+  margin: 2rem 0;
 }
