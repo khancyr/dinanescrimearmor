@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinan Escrime Armor</title>
 
-    <meta name="description" content="Site web du Club d'Escrime de Dinan">
+    <meta name="description" content="Dinan Escrime Armor : club d'escrime en Bretagne depuis 1996. Épée, fleuret, sabre, handisport et escrime artistique. Cours pour tous niveaux et âges à Dinan (22).">
+    <meta name="keywords" content="escrime, Dinan, Bretagne, épée, fleuret, sabre, club sport, handisport, escrime artistique, cours, débutant, compétition">
     <meta name="author" content="Dinan Escrime Armor">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="FR-22">
+    <meta name="geo.placename" content="Dinan">
 
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
     <meta property="og:site_name" content="Dinan Escrime Armor" />
     <meta property="og:site" content="https://www.dinanescrimearmor.fr" />
     <meta property="og:title" content="Dinan Escrime Armor">
-    <meta property="og:description" content="Découvrez le Club d'Escrime de Dinan, une institution sportive bretonne depuis 1996, accueillant escrimeurs de tous âges et niveaux." />
+    <meta property="og:description" content="Découvrez Dinan Escrime Armor, club d'escrime breton depuis 1996. Formation en épée, fleuret, sabre, handisport et escrime artistique pour tous niveaux." />
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.dinanescrimearmor.fr">
     <meta property="og:image" content="https://www.dinanescrimearmor.fr/img/LOGO-DEA_COULEUR.png">
@@ -23,6 +27,42 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/versions/bulma-no-dark-mode.min.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <!-- Données structurées JSON-LD pour le SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsClub",
+      "name": "Dinan Escrime Armor",
+      "alternateName": "DEA",
+      "foundingDate": "1996",
+      "url": "https://www.dinanescrimearmor.fr",
+      "logo": "https://www.dinanescrimearmor.fr/img/LOGO-DEA_COULEUR.png",
+      "description": "Club d'escrime breton depuis 1996, proposant fleuret, épée, sabre, handisport et escrime artistique pour tous niveaux",
+      "sport": ["Escrime", "Fencing"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Salle omnisports Némée, 37 Route de Dinard",
+        "addressLocality": "Dinan",
+        "postalCode": "22100",
+        "addressCountry": "FR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "escrimedinan22@gmail.com",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100063733075139",
+        "https://www.instagram.com/dinan.escrime.armor/",
+        "https://www.helloasso.com/associations/dinan-escrime-armor"
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Fédération Française d'Escrime"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -33,7 +73,7 @@
                     <figure class="image is-24x24">
                         <img src="./img/LOGO-DEA_COULEUR.png" alt="dea22">
                     </figure>
-                    <span class="logo-text ml-2">Club d'Escrime de Dinan</span>
+                    <span class="logo-text ml-2">Dinan Escrime Armor</span>
                 </a>
                 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
@@ -46,7 +86,8 @@
             <div id="navbarBasic" class="navbar-menu">
                 <div class="navbar-end">
                     <a href="#club" class="navbar-item">Le Club</a>
-                    <a href="#disciplines" class="navbar-item">Disciplines</a>
+                    <a href="disciplines.html" class="navbar-item">Disciplines</a>
+                    <a href="inscription.html" class="navbar-item">Inscription</a>
                     <a href="#horaires" class="navbar-item">Horaires</a>
                     <a href="#contact" class="navbar-item">Contact</a>
                 </div>
@@ -55,21 +96,61 @@
     </nav>
 
     <!-- Hero Section -->
-    <!-- <section id="accueil" class="hero is-link is-medium">
+    <section class="hero is-large hero-home">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h1 class="title is-1">
-                    Club d'Escrime de Dinan
+                <h1 class="title is-1 has-text-white">
+                    Dinan Escrime Armor
                 </h1>
-                <h2 class="subtitle is-3">
-                    L'art du combat depuis 1985
+                <h2 class="subtitle is-3 has-text-white">
+                    L'art du combat depuis 1996
                 </h2>
-                <a href="#club" class="button is-primary is-light is-medium">
-                    Découvrir le club
-                </a>
+                <p class="is-size-5 has-text-white mb-5">
+                    Découvrez l'escrime dans toute sa diversité : traditionnelle, artistique, handisport et bien-être
+                </p>
+                <div class="buttons is-centered">
+                    <a href="disciplines.html" class="button is-light is-large">
+                        <strong>Découvrir nos disciplines</strong>
+                    </a>
+                    <a href="inscription.html" class="button is-light is-large">
+                        S'inscrire
+                    </a>
+                </div>
             </div>
         </div>
-    </section> -->
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section" style="background: var(--theme-main-color); color: white;">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column is-3">
+                    <div class="achievement-card">
+                        <div class="achievement-number">29</div>
+                        <p><strong>Années d'expérience</strong></p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="achievement-card">
+                        <div class="achievement-number">100+</div>
+                        <p><strong>Licenciés</strong></p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="achievement-card">
+                        <div class="achievement-number">6</div>
+                        <p><strong>Disciplines pratiquées</strong></p>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="achievement-card">
+                        <div class="achievement-number">2</div>
+                        <p><strong>Maîtres d'armes</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Club Section -->
     <section id="club" class="section">
@@ -80,16 +161,16 @@
             </div>
             
             <div class="columns is-vcentered">
-                <div class="column is-half">
-                    <figure class="image is-4by5">
-                        <img src="./img/LOGO-DEA_COULEUR.png" alt="dea22">
+                <div class="column is-one-third">
+                    <figure class="image">
+                        <img src="./img/LOGO-DEA_COULEUR.png" alt="Logo Dinan Escrime Armor">
                     </figure>
                 </div>
                 
-                <div class="column is-half">
+                <div class="column is-two-thirds">
                     <div class="content">
                         <p class="is-size-5">
-                            Fondé en 1996, le Club d'Escrime de Dinan est une institution reconnue dans le paysage sportif breton. 
+                            Fondé en 1996, Dinan Escrime Armor est une institution reconnue dans le paysage sportif breton. 
                             Notre club accueille des escrimeurs de tous âges et de tous niveaux, du débutant au compétiteur confirmé.
                         </p>
                         <p class="is-size-5">
@@ -108,109 +189,138 @@
         </div>
     </section>
 
-    <!-- Disciplines Section -->
-    <section id="disciplines" class="section" style="background-color: #f5f5f5;">
+    <!-- Values Section -->
+    <section class="section values-section">
         <div class="container">
             <div class="has-text-centered mb-6">
-                <h2 class="title is-2">Nos Disciplines</h2>
+                <h2 class="title is-2">Nos Valeurs</h2>
                 <div class="is-divider"></div>
+                <p class="subtitle">Ce qui nous guide au quotidien</p>
             </div>
             
             <div class="columns">
-                <div class="column">
-                    <div class="card">
-                        <div class="card-content has-text-centered">
-                            <div class="card-icon">
-                                <i class="icon-fleuret"></i>
-                            </div>
-                            <h3 class="title is-4">Fleuret</h3>
-                            <div class="content">
-                                <p>
-                                    Arme légère et flexible, le fleuret est idéal pour débuter. Nous enseignons les techniques fondamentales 
-                                    et les règles spécifiques à cette discipline olympique.
-                                </p>
-                            </div>
-                        </div>
+                <div class="column has-text-centered">
+                    <div class="value-icon">
+                        <i class="icon-olympique"></i>
                     </div>
+                    <h3 class="title is-4">Excellence</h3>
+                    <p>
+                        Nous visons l'excellence dans l'enseignement et l'accompagnement de nos escrimeurs, 
+                        quel que soit leur niveau ou leurs objectifs.
+                    </p>
                 </div>
                 
-                <div class="column">
-                    <div class="card">
-                        <div class="card-content has-text-centered">
-                            <div class="card-icon">
-                                <i class="icon-epee"></i>
-                            </div>
-                            <h3 class="title is-4">Épée</h3>
-                            <div class="content">
-                                <p>
-                                    Plus lourde que le fleuret, l'épée moderne est l'héritière directe des armes de duel. Toute la surface du corps 
-                                    est cible dans cette discipline tactique.
-                                </p>
-                            </div>
-                        </div>
+                <div class="column has-text-centered">
+                    <div class="value-icon">
+                        <i class="icon-duel"></i>
                     </div>
+                    <h3 class="title is-4">Respect</h3>
+                    <p>
+                        Le respect de l'adversaire, des règles et de soi-même est au cœur de notre philosophie 
+                        et de l'esprit chevaleresque de l'escrime.
+                    </p>
                 </div>
                 
-                <div class="column">
-                    <div class="card">
-                        <div class="card-content has-text-centered">
-                            <div class="card-icon">
-                                <i class="icon-sabre"></i>
-                            </div>
-                            <h3 class="title is-4">Sabre</h3>
-                            <div class="content">
-                                <p>
-                                    Discipline la plus dynamique, le sabre permet de toucher avec la pointe et le tranchant. Nous formons aux 
-                                    techniques rapides et spectaculaires de cette arme.
-                                </p>
-                            </div>
-                        </div>
+                <div class="column has-text-centered">
+                    <div class="value-icon">
+                        <i class="icon-duel2"></i>
                     </div>
+                    <h3 class="title is-4">Convivialité</h3>
+                    <p>
+                        Notre club privilégie une ambiance familiale et chaleureuse où chacun peut 
+                        s'épanouir et progresser dans la bonne humeur.
+                    </p>
+                </div>
+                
+                <div class="column has-text-centered">
+                    <div class="value-icon">
+                        <i class="icon-fleuret"></i>
+                    </div>
+                    <h3 class="title is-4">Diversité</h3>
+                    <p>
+                        Nous accueillons tous les profils : jeunes, adultes, seniors, handisport. 
+                        L'escrime est un sport pour tous !
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-
+    <!-- Carousel Section -->
+    <section class="section carousel-section">
+        <div class="container is-fluid">
+            <div class="has-text-centered mb-6">
+                <h2 class="title is-2" style="color: white;">Galerie Photos</h2>
+                <div class="is-divider"></div>
+            </div>
+            <div class="carousel" tabindex="0">
+                <button class="carousel-btn prev" aria-label="Image précédente">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="carousel/photo_001.jpg" alt="Photo 1" class="carousel-img image is-square">
+                    <img src="carousel/photo_002.jpg" alt="Photo 2" class="carousel-img image is-square">
+                    <img src="carousel/photo_003.jpg" alt="Photo 3" class="carousel-img image is-square">
+                    <img data-src="carousel/photo_004.jpg" alt="Photo 4" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_005.jpg" alt="Photo 5" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_006.jpg" alt="Photo 6" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_007.jpg" alt="Photo 7" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_008.jpg" alt="Photo 8" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_009.jpg" alt="Photo 9" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_010.jpg" alt="Photo 10" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_011.jpg" alt="Photo 11" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_012.jpg" alt="Photo 12" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_013.jpg" alt="Photo 13" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_014.jpg" alt="Photo 14" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_015.jpg" alt="Photo 15" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_016.jpg" alt="Photo 16" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_017.jpg" alt="Photo 17" class="carousel-img image is-square" loading="lazy">
+                    <img data-src="carousel/photo_018.jpg" alt="Photo 18" class="carousel-img image is-square" loading="lazy">
+                </div>
+                <button class="carousel-btn next" aria-label="Image suivante">&#10095;</button>
+            </div>
+        </div>
+    </section>
     <!-- Horaires Section -->
-    <section id="horaires" class="section">
+    <section id="horaires" class="section horaires-section">
         <div class="container">
             <div class="has-text-centered mb-6">
                 <h2 class="title is-2 icon-clock"> Horaires d'entraînement</h2>
                 <div class="is-divider"></div>
             </div>
-            
             <div class="columns is-centered">
-                <div class="column is-two-thirds">
-                    <div class="box">
-                        <div class="content">
-                            <div class="schedule-item columns">
-                                <div class="column is-one-quarter">
-                                    <strong>Mercredi</strong>
-                                </div>
-                                <div class="column">
-                                    <p>14h00 - 15h00 : Petits (6-8 ans)</p>
-                                    <p>15h00 - 16h00 : Jeunes (8-12 ans)</p>
-                                    <p>16h00 - 18h00 : Adolescents (13-17 ans)</p>
-                                    <p>19h45 - 21h45 : Adultes</p>
-                                </div>
-                            </div>
-                            
-                            <div class="schedule-item columns">
-                                <div class="column is-one-quarter">
-                                    <strong>Vendredi</strong>
-                                </div>
-                                <div class="column">
-                                    <p>18h00 - 20h00 : Adolescents</p>
-                                    <p>20h00 - 22h00 : Adultes</p>
-                                </div>
-                            </div>
+                <div class="column is-half">
+                    <div class="horaires-card">
+                        <div class="horaires-card-header">
+                            <span class="horaires-day-icon"><i class="icon-clock"></i></span>
+                            <span class="horaires-day">Mercredi</span>
                         </div>
+                        <ul class="horaires-list">
+                            <li><span class="horaires-time">10h30 - 12h00</span> <span class="horaires-label">Sport Santé</span></li>
+                            <li><span class="horaires-time">13h30 - 14h30</span> <span class="horaires-label">M7</span></li>
+                            <li><span class="horaires-time">14h30 - 16h00</span> <span class="horaires-label">M9 - M11</span></li>
+                            <li><span class="horaires-time">16h00 - 17h30</span> <span class="horaires-label">M13 - M15</span></li>
+                            <li><span class="horaires-time">17h30 - 18h30</span> <span class="horaires-label">Cours Particulier</span></li>
+                            <li><span class="horaires-time">18h30 - 20h00</span> <span class="horaires-label">Artistique et Sabre Laser</span></li>
+                            <li><span class="horaires-time">20h00 - 21h30</span> <span class="horaires-label">M17 - M20, Sénior, Vétéran</span></li>
+                        </ul>
                     </div>
-                    <p class="has-text-centered has-text-grey">
-                        * Les horaires peuvent être modifiés en période de vacances scolaires
-                    </p>
+                </div>
+                <div class="column is-half">
+                    <div class="horaires-card">
+                        <div class="horaires-card-header">
+                            <span class="horaires-day-icon"><i class="icon-clock"></i></span>
+                            <span class="horaires-day">Vendredi</span>
+                        </div>
+                        <ul class="horaires-list">
+                            <li><span class="horaires-time">17h30 - 18h30</span> <span class="horaires-label">M9 - M11</span></li>
+                            <li><span class="horaires-time">18h30 - 20h00</span> <span class="horaires-label">M13 - M15</span></li>
+                            <li><span class="horaires-time">20h00 - 21h30</span> <span class="horaires-label">M17 - M20, Sénior, Vétéran</span></li>
+                            <li class="select-reveal"><span class="horaires-time">21h30 - 23h30</span> <span class="horaires-label">Apéro ZAIZAI: M20, Sénior, Vétéran</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <p class="has-text-centered has-text-grey mt-4">
+                <em>* Les horaires peuvent être modifiés en période de vacances scolaires</em>
+            </p>
         </div>
     </section>
 
@@ -227,15 +337,19 @@
                     <h3 class="title is-4 has-text-white">Coordonnées</h3>
                     <div class="contact-info content has-text-white">
                         <p><i class="icon-map"></i>Salle omnisports Némée<br>37 Rte de Dinard<br>22100 Dinan</p>
+                        <p>A coté des Dojos</p>
                         <p><i class="icon-envelop"></i> escrimedinan22@gmail.com </p>
+                        <a href="mailto:escrimedinan22@gmail.com" class="button is-light">
+                        Envoyer un email
+                        </a>
                     </div>
                 </div>
                 
                 <div class="column">
                     <h3 class="title is-4 has-text-white">Réseaux sociaux</h3>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=100063733075139"><i class="icon-facebook"></i></a>
-                        <a href="https://www.instagram.com/dinan.escrime.armor/?utm_source=ig_web_button_share_sheet"><i class="icon-instagram"></i></a>
+                    <div class="social-icons mb-4">
+                        <a href="https://www.facebook.com/profile.php?id=100063733075139" target="_blank"><i class="icon-facebook"></i></a>
+                        <a href="https://www.instagram.com/dinan.escrime.armor/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="icon-instagram"></i></a>
                     </div>
                     
                     <h3 class="title is-4 mt-5 has-text-white">Venir nous voir</h3>
@@ -243,8 +357,22 @@
                         <p>
                             Nous organisons régulièrement des portes ouvertes et des démonstrations. 
                             Consultez nos réseaux sociaux pour connaître les prochaines dates.
+                            <br><strong>Cours d'essai :</strong> Gratuit sur rendez-vous
                         </p>
                     </div>
+                </div>
+                
+                <div class="column">
+                    <h3 class="title is-4 has-text-white">Informations pratiques</h3>
+                    <div class="content has-text-white">
+                        <p><strong>Parking :</strong> Gratuit à proximité</p>
+                        <p><strong>Accessibilité :</strong> Salle accessible PMR</p>
+                        <p><strong>Vestiaires :</strong> Vestiaires séparés disponibles</p>
+                    </div>
+                    
+                    <a href="inscription.html" class="button is-light mt-3">
+                        <strong>S'inscrire maintenant</strong>
+                    </a>
                 </div>
             </div>
         </div>
@@ -289,4 +417,84 @@
         });
     </script>
 </body>
+<script>
+// Carousel: Show 3 images at a time
+document.addEventListener('DOMContentLoaded', function() {
+    const carouselImagesContainer = document.querySelector('.carousel-images');
+    const images = Array.from(carouselImagesContainer.querySelectorAll('.carousel-img'));
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let imagesPerSlide = getImagesPerSlide();
+    let current = 0;
+
+    function getImagesPerSlide() {
+        if (window.innerWidth <= 600) return 1;
+        if (window.innerWidth <= 900) return 2;
+        return 3;
+    }
+
+    // Fisher-Yates shuffle
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Shuffle images and re-append to container
+    shuffle(images);
+    images.forEach(img => carouselImagesContainer.appendChild(img));
+
+    function showImages(startIdx) {
+        imagesPerSlide = getImagesPerSlide();
+        // Adjust current if out of bounds after resize
+        if (current > getMaxStartIdx()) current = 0;
+        images.forEach((img, i) => {
+            if (i >= startIdx && i < startIdx + imagesPerSlide) {
+                // Lazy load if needed
+                if (!img.src && img.dataset.src) {
+                    img.src = img.dataset.src;
+                }
+                img.classList.add('active');
+            } else {
+                img.classList.remove('active');
+            }
+        });
+    }
+
+    function getMaxStartIdx() {
+        return images.length <= imagesPerSlide ? 0 : images.length - imagesPerSlide;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        current -= imagesPerSlide;
+        if (current < 0) {
+            current = getMaxStartIdx();
+        }
+        showImages(current);
+    });
+    nextBtn.addEventListener('click', () => {
+        current += imagesPerSlide;
+        if (current > getMaxStartIdx()) {
+            current = 0;
+        }
+        showImages(current);
+    });
+
+    // Keyboard navigation
+    document.querySelector('.carousel').addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevBtn.click();
+        if (e.key === 'ArrowRight') nextBtn.click();
+    });
+
+    // Initial display
+    showImages(current);
+
+    // Update on resize
+    window.addEventListener('resize', () => {
+        showImages(current);
+    });
+});
+</script>
 </html>

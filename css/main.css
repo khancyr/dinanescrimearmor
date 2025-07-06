@@ -1,13 +1,208 @@
-:root {
-  --theme-main-color: #003a5d; /* Define the theme's main color */
+/* ===== HORAIRES SECTION ===== */
+.horaires-section { background: var(--light-bg); }
+.horaires-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--shadow-medium);
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+  transition: box-shadow var(--transition-base);
+}
+.horaires-card:hover { box-shadow: var(--shadow-strong); }
+.horaires-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.horaires-day-icon {
+  background: var(--theme-main-color);
+  color: #fff;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.horaires-day {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--theme-main-color);
+}
+.horaires-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.horaires-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1.1rem;
+}
+.horaires-list li:last-child { border-bottom: none; }
+.horaires-time {
+  font-weight: bold;
+  color: var(--theme-secondary-color);
+  min-width: 120px;
+  display: inline-block;
+}
+.horaires-label { color: var(--text-dark); margin-left: 1rem; }
+
+/* Hidden text that appears only when selected */
+.select-reveal,
+.select-reveal .horaires-time,
+.select-reveal .horaires-label {
+  color: transparent !important;
+  background: transparent !important;
+  user-select: text;
+}
+.select-reveal::selection,
+.select-reveal .horaires-time::selection,
+.select-reveal .horaires-label::selection {
+  color: var(--accent-color) !important;
+  background: #fff7e6 !important;
+}
+.select-reveal::-moz-selection,
+.select-reveal .horaires-time::-moz-selection,
+.select-reveal .horaires-label::-moz-selection {
+  color: var(--accent-color) !important;
+  background: #fff7e6 !important;
+}
+@media screen and (max-width: 900px) {
+  .horaires-card {
+    padding: 1rem;
+  }
+  .horaires-day {
+    font-size: 1.2rem;
+  }
+  .horaires-day-icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  .horaires-time {
+    min-width: 90px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .horaires-card {
+    padding: 0.5rem;
+  }
+  .horaires-day {
+    font-size: 1rem;
+  }
+  .horaires-list li {
+    font-size: 1rem;
+    padding: 0.3rem 0;
+  }
+  .horaires-time {
+    min-width: 70px;
+  }
+}
+/* ===== CAROUSEL ===== */
+.carousel-section {
+  background: var(--theme-main-color);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+.carousel-images {
+  width: 100%;
+  height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
+.carousel-img {
+  display: none;
+  flex: 1 1 0%;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: 0 0.5rem;
+  transition: opacity 0.5s;
+  opacity: 0;
+  position: relative;
+}
+.carousel-img.active {
+  display: block;
+  opacity: 1;
+}
+.carousel-btn {
+  background: var(--theme-main-color);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 1rem;
+  transition: background 0.2s;
+  z-index: 2;
+}
+.carousel-btn:hover {
+  background: var(--accent-color);
+}
+@media screen and (max-width: 900px) {
+  .carousel-images {
+    height: 180px;
+  }
+  .carousel-img {
+    margin: 0 0.2rem;
+  }
+}
+/* ===== VARIABLES CSS ===== */
+:root {
+  --theme-main-color: #003a5d;
+  --theme-secondary-color: #0056b3;
+  --accent-color: #ff6b35;
+  --gold-color: #FFD700;
+  --success-color: #48c774;
+  --light-bg: #f8f9fa;
+  --border-color: #dee2e6;
+  --text-dark: #363636;
+  --shadow-light: 0 2px 15px rgba(0,0,0,0.1);
+  --shadow-medium: 0 4px 15px rgba(0,0,0,0.1);
+  --shadow-strong: 0 8px 25px rgba(0,0,0,0.15);
+  --transition-base: 0.3s ease;
+}
+
+/* ===== BASE STYLES ===== */
 body {
-  font-family: 'rotobo', sans-serif;
+  font-family: 'roboto', Arial, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+strong {
+  color: inherit;
+  font-weight: 700;
+}
+
+/* ===== LAYOUT COMPONENTS ===== */
+.section {
+  padding: 3rem 1.5rem;
 }
 
 .hero.is-primary {
@@ -15,51 +210,96 @@ body {
   background-position: center;
 }
 
+.box {
+  transition: background-color var(--transition-base);
+}
+
+/* ===== NAVIGATION ===== */
 .navbar {
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: background-color 0.3s;
+  box-shadow: var(--shadow-light);
+  transition: background-color var(--transition-base);
+}
+
+.navbar-item {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .navbar-item img {
   max-height: 2.5rem;
 }
 
+.navbar-item.is-active {
+  background-color: var(--theme-main-color);
+  color: white !important;
+  border-radius: 4px;
+}
+
 .logo-text {
   font-weight: 700;
   color: var(--theme-main-color);
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
-.section {
-  padding: 3rem 1.5rem;
+.is-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  transition: background-color var(--transition-base);
 }
 
-
+/* ===== CARDS ===== */
 .card {
   height: 100%;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-base);
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-light);
 }
-
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-.card-icon {
-  font-size: 2.5rem;
-  color: var(--theme-main-color);
-  margin-bottom: 1rem;
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
+/* ===== BUTTONS ===== */
+.button.is-primary {
+  background: var(--theme-main-color);
+  border: none;
+  font-weight: 600;
+  transition: all var(--transition-base);
+}
 
+.button.is-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 58, 93, 0.3);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: var(--text-dark);
+  color: white;
+  transition: background-color var(--transition-base);
+  padding: 1.5rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ===== CONTACT SECTION ===== */
 .contact-section {
   background-color: var(--theme-main-color);
   color: white;
 }
-
 
 .contact-info i {
   margin-right: 0.5rem;
@@ -71,7 +311,7 @@ body {
   color: white;
   font-size: 1.5rem;
   margin-right: 1rem;
-  transition: color 0.3s ease;
+  transition: color var(--transition-base);
 }
 
 .social-icons a:hover {
@@ -80,21 +320,14 @@ body {
 
 .schedule-item {
   padding: 0.75rem 0;
-  border-bottom: 1px solid #363636;
+  border-bottom: 1px solid var(--text-dark);
 }
-
 
 .schedule-item:last-child {
   border-bottom: none;
 }
 
-.footer {
-  background-color: #363636;
-  color: white;
-  transition: background-color 0.3s;
-}
-
-
+/* ===== UTILITY CLASSES ===== */
 .is-divider {
   margin: 2rem auto;
   height: 2px;
@@ -102,25 +335,21 @@ body {
   max-width: 100px;
 }
 
-
 .is-divider-light {
   background-color: white;
 }
 
-.is-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: white;
-  transition: background-color 0.3s;
-}
+/* ===== TYPOGRAPHY ===== */
+.title.is-1 { font-size: 4rem !important; }
+.title.is-2 { font-size: 3rem !important; }
+.title.is-3 { font-size: 2.5rem !important; }
+.title.is-4 { font-size: 2rem !important; }
+.title.is-5 { font-size: 1.5rem !important; }
+.subtitle.is-3 { font-size: 2rem !important; }
+.subtitle.is-4 { font-size: 1.75rem !important; }
+.subtitle.is-5 { font-size: 1.5rem !important; }
 
-
-.box {
-  transition: background-color 0.3s;
-}
-
-
+/* ===== ICON FONTS ===== */
 @font-face {
   font-family: 'dea22';
   src:
@@ -133,53 +362,302 @@ body {
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'dea22' !important;
-  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-duel1:before {
-  content: "\e901";
+.icon-duel:before { content: "\e903"; }
+.icon-duel2:before { content: "\e902"; }
+.icon-sabre:before { content: "\e904"; }
+.icon-epee:before { content: "\e905"; }
+.icon-fleuret:before { content: "\e906"; }
+.icon-olympique:before { content: "\e907"; }
+.icon-envelop:before { content: "\e945"; }
+.icon-map:before { content: "\e94b"; }
+.icon-clock:before { content: "\e94e"; }
+.icon-facebook:before { content: "\ea90"; }
+.icon-instagram:before { content: "\ea92"; }
+
+/* ===== HOME PAGE STYLES ===== */
+.hero-home {
+  background: linear-gradient(rgba(0, 58, 93, 0.8), rgba(0, 86, 179, 0.8)), url('../img/DEA\ LOGO\ MINIATURE-C2.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
 }
-.icon-duel2:before {
-  content: "\e902";
+
+.hero-home .button {
+  margin: 0.5rem;
 }
-.icon-duel:before {
-  content: "\e903";
+
+.achievement-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-medium);
+  transition: transform var(--transition-base);
 }
-.icon-sabre:before {
-  content: "\e904";
+
+.achievement-card:hover {
+  transform: translateY(-5px);
 }
-.icon-epee:before {
-  content: "\e905";
+
+.achievement-card strong,
+.achievement-card p {
+  color: var(--text-dark) !important;
 }
-.icon-fleuret:before {
-  content: "\e906";
+
+.achievement-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--theme-main-color);
 }
-.icon-olympique:before {
-  content: "\e907";
+
+.values-section {
+  background: var(--light-bg);
 }
-.icon-envelop:before {
-  content: "\e945";
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--theme-main-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1rem auto;
 }
-.icon-map:before {
-  content: "\e94b";
+
+/* ===== DISCIPLINES PAGE STYLES ===== */
+.discipline-hero {
+  background: var(--theme-main-color);
+  color: white;
 }
-.icon-clock:before {
-  content: "\e94e";
+
+.discipline-hero .title,
+.discipline-hero .subtitle {
+  color: white !important;
 }
-.icon-facebook:before {
-  content: "\ea90";
+
+.discipline-card {
+  height: 100%;
+  transition: all var(--transition-base);
+  border-radius: 8px;
+  overflow: hidden;
 }
-.icon-instagram:before {
-  content: "\ea92";
+
+.discipline-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+}
+
+.discipline-icon {
+  font-size: 3rem;
+  color: var(--theme-main-color);
+  margin-bottom: 1.5rem;
+}
+
+.olympic-badge {
+  background: linear-gradient(45deg, var(--gold-color), #FFA500);
+  color: var(--theme-main-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.special-section {
+  background: var(--light-bg);
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-top: auto;
+}
+
+.feature-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  padding-left: 2.25rem;
+}
+
+.feature-list li:before {
+  content: "⚔️";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 1.5rem;
+  text-align: center;
+}
+
+/* Amélioration de l'alignement des cartes disciplines */
+.discipline-card .card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.discipline-card .content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.discipline-card .content > p:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.discipline-card .feature-list {
+  margin-top: auto;
+  min-height: 200px; /* Hauteur minimale pour uniformiser les listes */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Alignement spécifique pour les cartes côte à côte (handisport/artistique) */
+.special-section .columns.is-multiline .column.is-half .discipline-card .feature-list {
+  min-height: 240px; /* Hauteur plus précise pour les cartes en demi-largeur */
+}
+
+.special-section .columns.is-multiline .column.is-half .discipline-card .content {
+  justify-content: space-between;
+}
+
+/* ===== INSCRIPTION PAGE STYLES ===== */
+.inscription-hero {
+  background: var(--theme-main-color);
+  color: white;
+}
+
+.inscription-hero .title,
+.inscription-hero .subtitle {
+  color: white !important;
+}
+
+.inscription-hero ~ section .feature-list li:before,
+.helloasso-section .feature-list li:before,
+.steps-section .feature-list li:before {
+  content: "✓";
+  color: var(--success-color);
+  font-weight: bold;
+  margin-right: 0.75rem;
+}
+
+.inscription-hero ~ section .feature-list li,
+.helloasso-section .feature-list li,
+.steps-section .feature-list li {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.steps-section {
+  background: var(--light-bg);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--theme-main-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1rem auto;
+}
+
+.helloasso-section {
+  background: #e8f4f8;
+}
+
+.helloasso-button {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.helloasso-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  color: white;
+}
+
+/* ===== 404 PAGE STYLES ===== */
+.error-hero {
+  background: var(--theme-main-color);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.error-number {
+  font-size: 8rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1;
+}
+
+.sword-icon {
+  font-size: 4rem;
+  color: white;
+  margin: 2rem 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media screen and (max-width: 768px) {
+  .hero.is-large .hero-body {
+    padding: 6rem 1.5rem;
+  }
+  
+  .achievement-card {
+    margin-bottom: 1rem;
+  }
+  
+  .value-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .title.is-1 { font-size: 2.5rem !important; }
+  .title.is-2 { font-size: 2rem !important; }
+  .title.is-3 { font-size: 1.75rem !important; }
+  .error-number { font-size: 4rem; }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-item {
+    font-size: 1rem;
+  }
+  
+  .logo-text {
+    font-size: 1.4rem;
+  }
+  
+  .section {
+    padding: 2rem 1rem;
+  }
 }

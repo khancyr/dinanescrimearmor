@@ -1,0 +1,57 @@
+# Configuration Nginx pour Dinan Escrime Armor
+# À adapter selon votre configuration serveur
+
+server {
+    listen 80;
+    server_name dinanescrimearmor.fr www.dinanescrimearmor.fr;
+    return 301 https://dinanescrimearmor.fr$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name www.dinanescrimearmor.fr;
+    return 301 https://dinanescrimearmor.fr$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name dinanescrimearmor.fr;
+    
+    root /var/www/escrime;
+    index index.html;
+    
+    # Certificats SSL (à adapter)
+    ssl_certificate /path/to/ssl/cert.pem;
+    ssl_certificate_key /path/to/ssl/private.key;
+    
+    # Headers de sécurité
+    add_header X-Frame-Options DENY;
+    add_header X-Content-Type-Options nosniff;
+    add_header X-XSS-Protection "1; mode=block";
+    add_header Referrer-Policy "strict-origin-when-cross-origin";
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
+    
+    # Compression
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_types text/plain text/css text/xml text/javascript application/javascript application/xml+rss application/json;
+    
+    # Cache des fichiers statiques
+    location ~* \.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+    
+    # Page d'erreur 404 personnalisée
+    error_page 404 /404.html;
+    
+    # Bloquer l'accès aux fichiers sensibles
+    location ~ /\. {
+        deny all;
+    }
+    
+    location ~ \.(htaccess|htpasswd|ini|log|sh|inc|bak)$ {
+        deny all;
+    }
+}
