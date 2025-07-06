@@ -1,15 +1,21 @@
 # humanstxt.org/
-# The humans responsible & technology colophon
+# Les personnes responsables et informations techniques
 
-# TEAM
+# ÉQUIPE
 
-    <name> -- <role> -- <twitter>
+    Dinan Escrime Armor -- Club d'escrime -- @dinan.escrime.armor
+    Développement web -- 2025
 
-# THANKS
+# TECHNOLOGIE
 
-    <name>
+    HTML5, CSS3, Bulma CSS Framework
+    Fonts: Roboto, Dea22 (icônes personnalisées)
+    Hébergement: France
 
-# TECHNOLOGY COLOPHON
+# SITE
 
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Dernière mise à jour: 2025/01/27
+    Langues: Français
+    Doctype: HTML5
+    IDE: Visual Studio Code/
+
