@@ -1,12 +1,23 @@
+# Robots.txt pour Dinan Escrime Armor
 # www.robotstxt.org/
 
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /disciplines.html
+Allow: /inscription.html
+Allow: /css/
+Allow: /img/
+Allow: /fonts/
+
+# Interdire l'archivage automatique non autorisé
 User-agent: ia_archiver
 Disallow: /
+
 User-agent: psbot
 Disallow: /
-Disallow: /cgi-bin/
-User-agent: *
-Disallow:
+
+# Sitemap
 Sitemap: https://www.dinanescrimearmor.fr/sitemap.xml
 
 

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Dinan Escrime Armor</title>
+
+    <meta name="description" content="Inscrivez-vous à Dinan Escrime Armor et rejoignez notre communauté d'escrimeurs passionnés">
+    <meta name="author" content="Dinan Escrime Armor">
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- OG Meta Tags -->
+    <meta property="og:site_name" content="Dinan Escrime Armor" />
+    <meta property="og:title" content="Inscription - Dinan Escrime Armor">
+    <meta property="og:description" content="Inscrivez-vous à Dinan Escrime Armor" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.dinanescrimearmor.fr/img/LOGO-DEA_COULEUR.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/versions/bulma-no-dark-mode.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .inscription-hero {
+            background: linear-gradient(135deg, #003a5d, #0056b3);
+            color: white;
+        }
+        
+        .inscription-hero .title,
+        .inscription-hero .subtitle {
+            color: white !important;
+        }
+        
+        .pricing-card {
+            height: 100%;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .pricing-card.is-featured {
+            border: 3px solid #0056b3;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.is-featured:hover {
+            transform: scale(1.08) translateY(-5px);
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #003a5d;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            z-index: 10;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--theme-main-color);
+        }
+        
+        .price-period {
+            font-size: 1rem;
+            color: #666;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            color: #48c774;
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+        
+        .steps-section {
+            background: #f8f9fa;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--theme-main-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem auto;
+        }
+        
+        .helloasso-section {
+            background: linear-gradient(135deg, #e8f4f8, #d1ecf1);
+        }
+        
+        .helloasso-button {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .helloasso-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar is-sticky">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <figure class="image is-24x24">
+                        <img src="./img/LOGO-DEA_COULEUR.png" alt="dea22">
+                    </figure>
+                    <span class="logo-text ml-2">Dinan Escrime Armor</span>
+                </a>
+                
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div id="navbarBasic" class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="index.html#club" class="navbar-item">Le Club</a>
+                    <a href="disciplines.html" class="navbar-item">Disciplines</a>
+                    <a href="inscription.html" class="navbar-item is-active">Inscription</a>
+                    <a href="index.html#horaires" class="navbar-item">Horaires</a>
+                    <a href="index.html#contact" class="navbar-item">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero is-medium inscription-hero">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">
+                    Rejoignez-nous !
+                </h1>
+                <h2 class="subtitle is-3">
+                    Inscription saison 2025-2026
+                </h2>
+                <p class="is-size-5 mt-4">
+                    Découvrez l'art de l'escrime dans un cadre convivial et professionnel
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="section steps-section">
+        <div class="container">
+            <div class="has-text-centered mb-6">
+                <h2 class="title is-2">Comment s'inscrire ?</h2>
+                <div class="is-divider"></div>
+                <p class="subtitle">Suivez ces étapes simples pour nous rejoindre</p>
+            </div>
+            
+            <div class="columns">
+                <div class="column has-text-centered">
+                    <div class="step-number">1</div>
+                    <h3 class="title is-4">Cours d'essai gratuits</h3>
+                    <p>
+                        Venez simplement aux horaires de cours ! Deux séances d'essai gratuites vous sont offertes 
+                        pour découvrir l'escrime et notre club.
+                    </p>
+                </div>
+                
+                <div class="column has-text-centered">
+                    <div class="step-number">2</div>
+                    <h3 class="title is-4">Certificat médical</h3>
+                    <p>
+                        Obtenez un certificat médical de non contre-indication à la pratique de l'escrime 
+                        auprès de votre médecin traitant.
+                    </p>
+                </div>
+                
+                <div class="column has-text-centered">
+                    <div class="step-number">3</div>
+                    <h3 class="title is-4">Inscription en ligne</h3>
+                    <p>
+                        Finalisez votre inscription et réglez votre cotisation 
+                        directement via notre plateforme HelloAsso sécurisée.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HelloAsso Section -->
+    <section class="section helloasso-section">
+        <div class="container">
+            <div class="box has-text-centered">
+                <h2 class="title is-2">Inscription en ligne</h2>
+                <div class="is-divider"></div>
+                <p class="subtitle is-4 mb-5">
+                    Finalisez votre inscription rapidement et en toute sécurité
+                </p>
+                
+                <div class="content is-medium mb-5">
+                    <p>
+                        <strong>Inscription 100% dématérialisée</strong>
+                    </p>
+                    <div class="columns is-centered">
+                        <div class="column is-half">
+                            <ul class="feature-list">
+                                <li>Traitement immédiat de votre dossier</li>
+                                <li>Aucun formulaire papier à remplir</li>
+                                <li>Paiement 100% sécurisé</li>
+                                <li>Confirmation automatique par email</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="helloasso-button" onclick="alert('Lien vers la page HelloAsso du club à configurer')">
+                    🔗 S'inscrire sur HelloAsso
+                </a>
+                
+                <p class="mt-4 is-size-6 has-text-grey">
+                    Vous serez redirigé vers notre page HelloAsso officielle
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informations pratiques Section -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="has-text-centered mb-6">
+                <h2 class="title is-2">Informations pratiques</h2>
+                <div class="is-divider"></div>
+            </div>
+            
+            <div class="columns is-centered">
+                <div class="column is-two-thirds">
+                    <div class="box">
+                        <div class="content">
+                            <div class="columns">
+                                <div class="column">
+                                    <h4 class="title is-5">📋 Documents nécessaires</h4>
+                                    <p>Certificat médical de non contre-indication à la pratique de l'escrime</p>
+                                    <p>Autorisation parentale pour les mineurs</p>
+                                    
+                                    <h4 class="title is-5 mt-4">🎽 Matériel</h4>
+                                    <p>Le matériel d'initiation est fourni par le club pour les débutants.</p>
+                                </div>
+                                <div class="column">
+                                    <h4 class="title is-5">🛡️ Assurance</h4>
+                                    <p>Incluse dans la cotisation via la licence FFE (Fédération Française d'Escrime).</p>
+                                    
+                                    <h4 class="title is-5 mt-4">💰 Tarifs</h4>
+                                    <p>Les tarifs sont disponibles directement sur notre plateforme HelloAsso lors de l'inscription en ligne.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="box has-text-centered" style="background: linear-gradient(135deg, #003a5d, #0056b3); color: white;">
+                <h2 class="title is-3 has-text-white">Des questions ?</h2>
+                <p class="subtitle is-5 has-text-white mb-5">
+                    Notre équipe est là pour vous accompagner dans votre inscription
+                </p>
+                <div class="buttons is-centered">
+                    <a href="index.html#contact" class="button is-light is-large">
+                        <strong>Nous contacter</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dinan Escrime Armor - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbarBurger = document.querySelector('.navbar-burger');
+            const navbarMenu = document.querySelector('.navbar-menu');
+            
+            navbarBurger.addEventListener('click', () => {
+                navbarBurger.classList.toggle('is-active');
+                navbarMenu.classList.toggle('is-active');
+            });
+        });
+    </script>
+</body>
+</html>
