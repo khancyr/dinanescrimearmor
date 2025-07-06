@@ -77,24 +77,23 @@ strong {
   transition: background-color var(--transition-base);
 }
 
-/* ===== CARDS & INTERACTIVE ELEMENTS ===== */
+/* ===== CARDS ===== */
 .card {
   height: 100%;
   transition: transform var(--transition-base);
   border-radius: 6px;
   overflow: hidden;
   box-shadow: var(--shadow-light);
-  animation: fadeInUp 0.6s ease-out;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-.card-icon {
-  font-size: 2.5rem;
-  color: var(--theme-main-color);
-  margin-bottom: 1rem;
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /* ===== BUTTONS ===== */
@@ -109,7 +108,6 @@ strong {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 58, 93, 0.3);
 }
-
 
 /* ===== FOOTER ===== */
 .footer {
@@ -174,9 +172,10 @@ strong {
 .title.is-2 { font-size: 3rem !important; }
 .title.is-3 { font-size: 2.5rem !important; }
 .title.is-4 { font-size: 2rem !important; }
+.title.is-5 { font-size: 1.5rem !important; }
 .subtitle.is-3 { font-size: 2rem !important; }
+.subtitle.is-4 { font-size: 1.75rem !important; }
 .subtitle.is-5 { font-size: 1.5rem !important; }
-.subtitle.is-6 { font-size: 1.25rem !important; }
 
 /* ===== ICON FONTS ===== */
 @font-face {
@@ -201,9 +200,8 @@ strong {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-duel1:before { content: "\e901"; }
-.icon-duel2:before { content: "\e902"; }
 .icon-duel:before { content: "\e903"; }
+.icon-duel2:before { content: "\e902"; }
 .icon-sabre:before { content: "\e904"; }
 .icon-epee:before { content: "\e905"; }
 .icon-fleuret:before { content: "\e906"; }
@@ -219,7 +217,7 @@ strong {
   background: linear-gradient(rgba(0, 58, 93, 0.8), rgba(0, 86, 179, 0.8)), url('../img/DEA\ LOGO\ MINIATURE-C2.png');
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat;
   color: white;
 }
 
@@ -268,15 +266,6 @@ strong {
   margin: 0 auto 1rem auto;
 }
 
-#club .image {
-  max-width: 200px;
-  margin: 0 auto;
-}
-
-#club .image img {
-  object-fit: contain;
-}
-
 /* ===== DISCIPLINES PAGE STYLES ===== */
 .discipline-hero {
   background: var(--theme-main-color);
@@ -323,7 +312,7 @@ strong {
 .feature-list {
   list-style: none;
   padding: 0;
-  margin-top: auto; /* Pour pousser les listes vers le bas dans les cartes flexbox */
+  margin-top: auto;
 }
 
 .feature-list li {
@@ -361,6 +350,19 @@ strong {
 
 .discipline-card .feature-list {
   margin-top: auto;
+  min-height: 200px; /* Hauteur minimale pour uniformiser les listes */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Alignement spécifique pour les cartes côte à côte (handisport/artistique) */
+.special-section .columns.is-multiline .column.is-half .discipline-card .feature-list {
+  min-height: 240px; /* Hauteur plus précise pour les cartes en demi-largeur */
+}
+
+.special-section .columns.is-multiline .column.is-half .discipline-card .content {
+  justify-content: space-between;
 }
 
 /* ===== INSCRIPTION PAGE STYLES ===== */
@@ -389,41 +391,6 @@ strong {
   border-bottom: 1px solid #f0f0f0;
 }
 
-.pricing-card {
-  height: 100%;
-  transition: all var(--transition-base);
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
-}
-
-.pricing-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-strong);
-}
-
-.pricing-card.is-featured {
-  border: 3px solid var(--theme-secondary-color);
-  transform: scale(1.05);
-}
-
-.pricing-card.is-featured:hover {
-  transform: scale(1.08) translateY(-5px);
-}
-
-
-
-.price {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: var(--theme-main-color);
-}
-
-.price-period {
-  font-size: 1rem;
-  color: #666;
-}
-
 .steps-section {
   background: var(--light-bg);
 }
@@ -443,11 +410,11 @@ strong {
 }
 
 .helloasso-section {
-  background:  #e8f4f8;
+  background: #e8f4f8;
 }
 
 .helloasso-button {
-  background:  var(--accent-color);
+  background: var(--accent-color);
   border: none;
   color: white;
   font-weight: bold;
@@ -485,18 +452,6 @@ strong {
   font-size: 4rem;
   color: white;
   margin: 2rem 0;
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
