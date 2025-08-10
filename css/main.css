@@ -1,3 +1,77 @@
+/* ===== CAROUSEL ===== */
+.carousel-section {
+  background: var(--theme-main-color);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+.carousel-images {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-img {
+  display: none;
+  flex: 1 1 0%;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: 0 0.5rem;
+  transition: opacity 0.5s;
+  opacity: 0;
+  position: relative;
+}
+.carousel-img.active {
+  display: block;
+  opacity: 1;
+}
+.carousel-btn {
+  background: var(--theme-main-color);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 1rem;
+  transition: background 0.2s;
+  z-index: 2;
+}
+.carousel-btn:hover {
+  background: var(--accent-color);
+}
+@media screen and (max-width: 900px) {
+  .carousel-images {
+    height: 180px;
+  }
+  .carousel-img {
+    margin: 0 0.2rem;
+  }
+}
 /* ===== VARIABLES CSS ===== */
 :root {
   --theme-main-color: #003a5d;
