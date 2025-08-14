@@ -1,3 +1,97 @@
+/* ===== HORAIRES SECTION ===== */
+.horaires-section {
+  background: var(--light-bg);
+}
+.horaires-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow-medium);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 2rem;
+  transition: box-shadow var(--transition-base);
+}
+.horaires-card:hover {
+  box-shadow: var(--shadow-strong);
+}
+.horaires-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.horaires-day-icon {
+  background: var(--theme-main-color);
+  color: white;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.horaires-day {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--theme-main-color);
+}
+.horaires-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.horaires-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1.1rem;
+}
+.horaires-list li:last-child {
+  border-bottom: none;
+}
+.horaires-time {
+  font-weight: bold;
+  color: var(--theme-secondary-color);
+  min-width: 120px;
+  display: inline-block;
+}
+.horaires-label {
+  color: var(--text-dark);
+  margin-left: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .horaires-card {
+    padding: 1rem;
+  }
+  .horaires-day {
+    font-size: 1.2rem;
+  }
+  .horaires-day-icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  .horaires-time {
+    min-width: 90px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .horaires-card {
+    padding: 0.5rem;
+  }
+  .horaires-day {
+    font-size: 1rem;
+  }
+  .horaires-list li {
+    font-size: 1rem;
+    padding: 0.3rem 0;
+  }
+  .horaires-time {
+    min-width: 70px;
+  }
+}
 /* ===== CAROUSEL ===== */
 .carousel-section {
   background: var(--theme-main-color);
