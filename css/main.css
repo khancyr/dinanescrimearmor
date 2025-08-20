@@ -661,3 +661,95 @@ strong {
     padding: 2rem 1rem;
   }
 }
+
+/* ===== SPONSORS PAGE STYLES ===== */
+.sponsors-hero {
+  background: var(--theme-main-color);
+  color: white;
+}
+
+.sponsors-hero .title,
+.sponsors-hero .subtitle {
+  color: white !important;
+}
+
+.sponsors-grid-section {
+  background: var(--light-bg);
+}
+
+.sponsor-category {
+  margin-bottom: 3rem;
+}
+
+.sponsor-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  padding: 1.5rem;
+  text-align: center;
+  height: 100%;
+  transition: all var(--transition-base);
+  border: 1px solid var(--border-color);
+}
+
+.sponsor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-strong);
+}
+
+.sponsor-card.premium {
+  border: 2px solid var(--gold-color);
+  background: linear-gradient(135deg, #fff 0%, #fff9f0 100%);
+}
+
+.sponsor-card.institutional {
+  border: 2px solid var(--theme-main-color);
+  background: linear-gradient(135deg, #fff 0%, #f0f8ff 100%);
+}
+
+.sponsor-logo {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.sponsor-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.sponsor-card.premium .sponsor-logo {
+  height: 150px;
+}
+
+.sponsor-info h4 {
+  color: var(--theme-main-color);
+  margin-bottom: 0.5rem;
+}
+
+.sponsor-info p {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.become-sponsor-section {
+  background: var(--theme-main-color);
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .sponsor-logo {
+    height: 80px;
+  }
+  
+  .sponsor-card.premium .sponsor-logo {
+    height: 100px;
+  }
+  
+  .sponsor-card {
+    padding: 1rem;
+  }
+}
