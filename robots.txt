@@ -6,6 +6,7 @@ Allow: /
 Allow: /index.html
 Allow: /disciplines.html
 Allow: /inscription.html
+Allow: /sponsors.html
 Allow: /css/
 Allow: /img/
 Allow: /fonts/
