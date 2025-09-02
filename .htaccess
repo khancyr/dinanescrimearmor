@@ -45,8 +45,8 @@
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     
     # Redirection www vers non-www
-    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+    RewriteCond %{HTTP_HOST} ^www\.dinanescrimearmor\.fr [NC]
+    RewriteRule ^(.*)$ https://dinanescrimearmor.fr/$1 [L,R=301]
 </IfModule>
 
 # Page d'erreur personnalisée

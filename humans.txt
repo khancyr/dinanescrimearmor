@@ -14,7 +14,7 @@
 
 # SITE
 
-    Dernière mise à jour: 2025/01/27
+    Dernière mise à jour: 2025/09/02
     Langues: Français
     Doctype: HTML5
     IDE: Visual Studio Code/

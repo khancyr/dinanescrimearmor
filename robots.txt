@@ -19,6 +19,6 @@ User-agent: psbot
 Disallow: /
 
 # Sitemap
-Sitemap: https://www.dinanescrimearmor.fr/sitemap.xml
+Sitemap: https://dinanescrimearmor.fr/sitemap.xml
 
 

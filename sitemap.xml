@@ -6,28 +6,28 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://www.dinanescrimearmor.fr/</loc>
+  <loc>https://dinanescrimearmor.fr/</loc>
   <lastmod>2025-09-02</lastmod>
   <changefreq>monthly</changefreq>
   <priority>1.00</priority>
 </url>
 
 <url>
-  <loc>https://www.dinanescrimearmor.fr/disciplines.html</loc>
+  <loc>https://dinanescrimearmor.fr/disciplines.html</loc>
   <lastmod>2025-09-02</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 
 <url>
-  <loc>https://www.dinanescrimearmor.fr/inscription.html</loc>
+  <loc>https://dinanescrimearmor.fr/inscription.html</loc>
   <lastmod>2025-09-02</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
 
 <url>
-  <loc>https://www.dinanescrimearmor.fr/sponsors.html</loc>
+  <loc>https://dinanescrimearmor.fr/sponsors.html</loc>
   <lastmod>2025-09-02</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
