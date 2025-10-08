@@ -200,6 +200,29 @@ strong {
   font-weight: 700;
 }
 
+/* ===== ALERT BANNER ===== */
+.alert-banner {
+  padding: 1rem 1.5rem;
+  background: #ffe08a;
+}
+
+.alert-banner .notification {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ===== LAYOUT COMPONENTS ===== */
 .section {
   padding: 3rem 1.5rem;
