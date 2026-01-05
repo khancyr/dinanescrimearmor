@@ -4,7 +4,7 @@
 # ÉQUIPE
 
     Dinan Escrime Armor -- Club d'escrime -- @dinan.escrime.armor
-    Développement web -- 2025
+    Développement web -- 2026
 
 # TECHNOLOGIE
 
@@ -14,7 +14,7 @@
 
 # SITE
 
-    Dernière mise à jour: 2025/09/02
+    Dernière mise à jour: 2026/01/05
     Langues: Français
     Doctype: HTML5
     IDE: Visual Studio Code/
