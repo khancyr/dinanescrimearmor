@@ -103,28 +103,8 @@
 
     <!-- Temporary Alert Banner -->
     <section class="section alert-banner">
-        <div class="container">
-            <div class="notification is-warning has-text-centered">
-                <strong>
-                    <span style="font-size:1.1em;">
-                        ⚠️ Premier cours à Aucaleuc de ce mercredi !
-                    </span>
-                </strong>
-                <br>
-                <span class="horaires-day">📍</span>
-                <span class="horaires-day"> <a href="https://maps.app.goo.gl/HosrderBvS7gkG2h7" target="_blank">Salle polyvalente d'Aucaleuc</a></span>
-            </div>
-            <div class="notification is-info has-text-centered mt-3">
-                <strong>
-                    <span style="font-size:1.1em;">
-                        📱 Nouveau : Groupe WhatsApp du club !
-                    </span>
-                </strong>
-                <br>
-                <span>Rejoignez notre groupe WhatsApp pour rester informé des changements d'horaires et Informations importantes, et faciliter les échanges entre parents.</span>
-                <br>
-                <span>Contactez-nous par email pour recevoir le lien d'invitation : <a href="mailto:escrimedinan22@gmail.com">escrimedinan22@gmail.com</a></span>
-            </div>
+        <div class="container" id="alert-container">
+            <!-- Alert loaded dynamically from alert.html -->
         </div>
     </section>
 
@@ -428,7 +408,14 @@
     </footer>
 
     <script>
-        
+        // Load alert with cache busting (always fetches fresh content)
+        fetch('alert.html?v=' + Date.now())
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('alert-container').innerHTML = html;
+            })
+            .catch(err => console.log('Alert not loaded:', err));
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
