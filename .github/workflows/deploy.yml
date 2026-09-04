@@ -1,0 +1,35 @@
+name: Deploy to OVH
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: "List changes without uploading"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v7
+      - uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          server-dir: www/
+          dry-run: ${{ inputs.dry-run == true }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            ai_changes/**
+            Readme.md
+            nginx.conf.example
